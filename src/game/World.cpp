@@ -96,6 +96,8 @@ World::World()
 
     m_defaultDbcLocale = LOCALE_enUS;
     m_availableDbcLocaleMask = 0;
+    
+    lastDiff = 0;
 
     for(int i = 0; i < CONFIG_UINT32_VALUE_COUNT; ++i)
         m_configUint32Values[i] = 0;
@@ -1412,6 +1414,7 @@ void World::DetectDBCLang()
 /// Update the World !
 void World::Update(uint32 diff)
 {
+    lastDiff = diff;
     ///- Update the different timers
     for(int i = 0; i < WUPDATE_COUNT; ++i)
     {

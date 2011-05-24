@@ -575,6 +575,8 @@ class World
         void LoadDBVersion();
         char const* GetDBVersion() { return m_DBVersion.c_str(); }
         char const* GetCreatureEventAIVersion() { return m_CreatureEventAIVersion.c_str(); }
+        
+        uint32 getDiff() { return lastDiff; }
 
     protected:
         void _UpdateGameTime();
@@ -668,6 +670,8 @@ class World
         //used versions
         std::string m_DBVersion;
         std::string m_CreatureEventAIVersion;
+        
+        uint32 lastDiff;
 };
 
 extern uint32 realmID;
