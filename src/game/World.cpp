@@ -955,8 +955,8 @@ void World::SetInitialWorldSettings()
     sSpellMgr.LoadSkillLineAbilityMap();
 
     ///- Clean up and pack instances
-    sLog.outString( "Cleaning up instances..." );
-    sMapPersistentStateMgr.CleanupInstances();              // must be called before `creature_respawn`/`gameobject_respawn` tables
+    //sLog.outString( "Cleaning up instances..." );
+    //sMapPersistentStateMgr.CleanupInstances();              // must be called before `creature_respawn`/`gameobject_respawn` tables
 
     sLog.outString( "Packing instances..." );
     sMapPersistentStateMgr.PackInstances();
